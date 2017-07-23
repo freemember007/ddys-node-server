@@ -1,0 +1,105 @@
+<style>
+  #doctor-article {
+    padding: 10px;
+  }
+    .docInfo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      margin: 10px;
+      box-sizing: border-box;
+      border: 1px solid #eee;
+      clear: both;
+    }
+      .docInfo .avatar {
+        float: left;
+        border-radius: 50%;
+      }
+      .docInfo .left {
+        float: left;
+        margin-left: 5px;
+      }
+        .left .name {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .left .title {
+          font-size: 16px;
+          color: #999999;
+        }
+        .left .dept {
+          font-size: 16px;
+          color: #999999;
+        }
+      .docInfo .right {
+        float: right;
+      }
+        .right .button {
+          /*float: right;*/
+          line-height: 50px;
+          padding: 5px;
+          background: #73c167;
+          font-size: 16px;
+          color: #FFFFFF;
+          cursor: pointer;
+        }
+      .docInfo h2 {
+        position: fixed;
+        top: 90px;
+      }
+    .article {
+      position: absolute;
+      top: 130px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px;
+      overflow: auto;
+    }
+      .article .content{
+        /*position: absolute;*/
+        line-height: 1.5;
+        font-size: 18px;
+      }
+      .article img {
+        display: block;
+        margin: 10px auto;
+      }
+
+
+</style>
+
+
+<div id="doctor-article">
+  <div class="docInfo">
+    <img class="avatar"　width="50" height="50" src="{{=it.article.doctorVo.docInfo.dFaceUrl}}">
+    <div class="left">
+      <p>
+        <span class="name">{{=it.article.doctorVo.yyysList[0].ysxm}}</span>
+        <span class="title">{{=it.article.doctorVo.yyysList[0].yszc}}</span>
+      </p>
+      <p>
+        <span class="hos">
+          {{=it.article.doctorVo.yyysList[0].yyjc}}
+        </span>
+        <span class="dept">
+          {{=it.article.doctorVo.yyysList[0].ksmc}}
+        </span>
+      </p>
+    </div>
+    <div class="right">
+      <span class="button"> 了解更多</span>
+    </div>
+    <h2 >{{=it.article.ghArticleTitle}}</h2>
+  </div>
+  <div class="article">
+    <div class="content">
+      {{=it.article.ghArticleContent}}
+    </div>
+    <img class="barcode" width="80%" src="{{=it.article.doctorVo.yyysList[0].qrcodeUrl}}">
+    <img class="barcode" width="80%" src="http://ddys-10045454.file.myqcloud.com/img/Evaluation.png">
+  </div>
+
+</div>

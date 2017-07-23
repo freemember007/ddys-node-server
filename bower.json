@@ -1,0 +1,20 @@
+{
+  "name": "ddys_node_server",
+  "description": "点点医生node服务端",
+  "main": "app.js",
+  "authors": [
+    "XiaoJiangPing"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mui": "^0.6.0"
+  }
+}
